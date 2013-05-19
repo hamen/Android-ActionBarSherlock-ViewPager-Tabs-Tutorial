@@ -8,6 +8,7 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 public class FragmentTab1 extends SherlockFragment {
+
 	@Override
 	public SherlockFragmentActivity getSherlockActivity() {
 		return super.getSherlockActivity();
@@ -25,4 +26,12 @@ public class FragmentTab1 extends SherlockFragment {
 		View view = inflater.inflate(R.layout.fragmenttab1, container, false);
 		return view;
 	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		setUserVisibleHint(true);
+	}
+
+	
 }
